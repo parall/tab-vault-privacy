@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · 标签页保险箱 Tab Vault</title>
+<meta name="description" content="标签页保险箱（Tab Vault）隐私政策：不收集、不上传、不统计任何数据，所有记录仅保存在你本机浏览器中。">
+<meta name="robots" content="index,follow">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f7f7f5;
+    --surface-2: #f1f0ec;
+    --line: #eae8e3;
+    --line-strong: #dcdad4;
+    --ink: #1b1b19;
+    --ink-2: #6c6a65;
+    --ink-3: #9c9a92;
+    --accent: #0f6e56;
+    --accent-soft: #eaf5f1;
+    --accent-line: #bfe3d6;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 16px;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  /* 页头 */
+  .head { margin-bottom: 40px; }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+
+  .mark svg { display: block; }
+
+  .brand-txt { display: flex; flex-direction: column; line-height: 1.35; }
+  .brand-name { font-size: 15px; font-weight: 650; letter-spacing: .2px; }
+  .brand-sub { font-size: 12.5px; color: var(--ink-3); letter-spacing: .3px; }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    margin: 0 0 14px;
+  }
+
+  .meta {
+    font-size: 13.5px;
+    color: var(--ink-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+
+  /* 摘要卡片 */
+  .tldr {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin: 0 0 8px;
+  }
+
+  .tldr h2 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    font-weight: 650;
+    color: var(--accent);
+    letter-spacing: .2px;
+  }
+
+  .tldr p {
+    margin: 0;
+    font-size: 15px;
+    color: #16453a;
+  }
+
+  .tldr ul {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 6px;
+  }
+
+  .tldr li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14.5px;
+    color: #1c5646;
+  }
+
+  .tldr li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: .62em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: .55;
+  }
+
+  /* 正文 */
+  section { padding-top: 34px; }
+
+  h2 {
+    font-size: 19px;
+    font-weight: 650;
+    letter-spacing: -.2px;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h2 .num {
+    display: inline-block;
+    min-width: 30px;
+    color: var(--ink-3);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  p { margin: 0 0 14px; color: #2c2c29; }
+
+  ul.plain { margin: 0 0 14px; padding-left: 22px; color: #2c2c29; }
+  ul.plain li { margin-bottom: 7px; }
+
+  strong { font-weight: 650; }
+
+  .lead {
+    font-size: 17px;
+    color: var(--ink);
+  }
+
+  /* 表格 */
+  .tbl {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4px 0 16px;
+    font-size: 14.5px;
+  }
+
+  .tbl th, .tbl td {
+    text-align: left;
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  .tbl th {
+    font-weight: 620;
+    color: var(--ink-2);
+    font-size: 13px;
+    letter-spacing: .4px;
+    background: var(--surface);
+  }
+
+  .tbl tr:last-child td { border-bottom: none; }
+
+  .tbl code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    font-size: 13px;
+    background: var(--surface-2);
+    padding: 1.5px 6px;
+    border-radius: 5px;
+    color: var(--accent);
+  }
+
+  /* 强调块 */
+  .note {
+    background: var(--surface);
+    border-left: 3px solid var(--accent-line);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 4px 0 16px;
+    font-size: 14.5px;
+    color: var(--ink-2);
+  }
+
+  .note p:last-child { margin-bottom: 0; }
+
+  /* 英文摘要 */
+  .en {
+    margin-top: 48px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--ink-2);
+  }
+
+  .en h2 {
+    font-size: 15px;
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .en p { color: var(--ink-2); }
+
+  /* 页脚 */
+  footer {
+    margin-top: 44px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    justify-content: space-between;
+  }
+
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-line); }
+  a:hover { border-bottom-color: var(--accent); }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 36px 18px 64px; }
+    h1 { font-size: 27px; }
+    body { font-size: 15.5px; }
+    .tbl { font-size: 13.5px; }
+    .tbl th, .tbl td { padding: 9px 8px; }
+  }
+
+  @media print {
+    .wrap { max-width: none; padding: 0; }
+    .tldr { break-inside: avoid; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header class="head">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h3.2c.7 0 1.3.28 1.77.76L12.6 7h5A2.5 2.5 0 0 1 20 9.5v7A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M9.2 12.6l2.1 2.1 3.9-4.1" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="brand-txt">
+        <span class="brand-name">标签页保险箱</span>
+        <span class="brand-sub">TAB VAULT</span>
+      </div>
+    </div>
+
+    <h1>隐私政策</h1>
+    <div class="meta">
+      <span>最后更新：2026 年 10 月 21 日</span>
+      <span>生效日期：2026 年 10 月 21 日</span>
+      <span>适用产品：Chrome 扩展「标签页保险箱」</span>
+    </div>
+  </header>
+
+  <div class="tldr">
+    <h2>一句话总结</h2>
+    <p>本扩展不联网、不上传、不统计。你的浏览数据只存在于你自己的电脑里。</p>
+    <ul>
+      <li>扩展代码中没有任何向服务器发送数据的网络请求</li>
+      <li>不收集、不出售、不分享任何用户数据</li>
+      <li>不读取网页正文、表单内容、Cookie 或密码</li>
+      <li>无痕模式下不运行，也不记录无痕窗口</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2><span class="num">一、</span>我们不收集任何数据</h2>
+    <p>本扩展不包含任何向外部服务器发送数据的网络请求代码，不与任何服务器通信，不进行数据统计、埋点、崩溃上报或用户行为分析。你在浏览器里的一切，都不会离开你的电脑。</p>
+    <p>由于我们从未获得你的数据，因此也不存在「收集」「使用」「共享」「出售」数据的行为。本扩展不要求注册账号，不要求登录，不需要填写任何个人信息。</p>
+  </section>
+
+  <section>
+    <h2><span class="num">二、</span>扩展会读取哪些信息</h2>
+    <p>为完成「记录并恢复标签页」这一唯一功能，扩展会在本机读取以下信息：</p>
+    <ul class="plain">
+      <li>标签页的网址（URL）与标题；</li>
+      <li>标签页的图标地址、在窗口中的排列顺序、是否被固定、所属标签分组；</li>
+      <li>窗口的数量、位置与尺寸；</li>
+      <li>你关闭某个窗口时，该窗口所包含的标签页列表。</li>
+    </ul>
+    <div class="note">
+      <p><strong>扩展不会读取</strong>网页正文内容、表单填写内容、输入记录、键盘记录、Cookie、密码、剪贴板、下载记录、书签，也不会读取 <code>chrome.history</code> 中的历史访问记录。</p>
+    </div>
+    <p>上述读取行为仅用于在本机生成状态快照，以及在恢复时重建窗口与标签页。<strong>读取后的数据不会被传输到任何地方。</strong></p>
+  </section>
+
+  <section>
+    <h2><span class="num">三、</span>数据存储在哪里</h2>
+    <p>所有数据保存在你本机浏览器的 <strong>IndexedDB</strong> 数据库中，数据库键名为 <code>tabvault</code>，与你的浏览器配置同处一个用户目录。</p>
+    <p>没有任何副本上传到云端、服务器或第三方。扩展没有后端服务，没有数据库服务器，也没有日志收集系统。因此，即使我们希望查看你的数据，技术上也做不到。</p>
+  </section>
+
+  <section>
+    <h2><span class="num">四、</span>数据保留与删除</h2>
+    <p>快照会自动滚动清理，默认保留最近 <strong>300 条</strong>、最长 <strong>90 天</strong>，两个上限都可以在扩展设置页中调整。超出上限的旧记录会被自动删除，以控制占用空间。</p>
+    <p>你可以随时在设置页点击「清空全部记录」，立即删除本机保存的所有数据。卸载扩展时，浏览器会一并清除其全部本地数据。导出功能生成的 JSON 备份文件保存在你自己选择的本地路径，其保管与删除完全由你控制。</p>
+  </section>
+
+  <section>
+    <h2><span class="num">五、</span>数据分享与第三方</h2>
+    <p>我们不分享、不出售、不转让任何数据，因为我们根本没有拿到这些数据。本扩展不集成任何第三方 SDK、统计工具、广告组件或分析服务。除浏览器自身提供的接口外，扩展不访问任何外部域名。</p>
+  </section>
+
+  <section>
+    <h2><span class="num">六、</span>无痕模式</h2>
+    <p>本扩展在无痕（隐私）模式下不运行（清单中声明为 <code>incognito: not_allowed</code>），也不会记录无痕窗口中的任何标签页。你可以在常规窗口中放心使用，无痕窗口的内容始终不会被记录。</p>
+  </section>
+
+  <section>
+    <h2><span class="num">七、</span>权限用途说明</h2>
+    <p>本扩展申请的每一项权限，都直接服务于「记录并恢复窗口与标签页」这一功能，没有一项用于其他目的：</p>
+    <table class="tbl">
+      <thead>
+        <tr><th style="width:31%">权限</th><th>用途</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>tabs</code></td><td>读取标签页的网址、标题、图标、顺序、固定状态与分组，用于生成状态快照；恢复时据此重建标签页。</td></tr>
+        <tr><td><code>sessions</code></td><td>在你关闭某个窗口的瞬间，取回该窗口刚刚关闭的标签页列表，用于误关救援。仅读取最近关闭的条目，不写入。</td></tr>
+        <tr><td><code>storage</code><br><code>unlimitedStorage</code></td><td>将快照保存在本机浏览器数据库中；快照数量较多时需要更大的存储配额。数据不上传。</td></tr>
+        <tr><td><code>alarms</code></td><td>每分钟触发一次后台检查，判断标签页是否发生变化，仅在变化时才写入新快照。</td></tr>
+        <tr><td><code>notifications</code></td><td>关闭含多个标签页的窗口时弹出系统提醒，便于一键恢复。可在设置中关闭。</td></tr>
+        <tr><td><code>sidePanel</code></td><td>在浏览器侧边栏展示时间线与恢复操作，这是扩展的主界面。</td></tr>
+      </tbody>
+    </table>
+    <div class="note">
+      <p>本扩展<strong>不申请任何主机权限（host permissions）</strong>，不向任何网页注入脚本，不修改页面内容，也不使用任何远程加载的代码——所有 JavaScript 均随扩展安装包一同发布。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">八、</span>儿童隐私</h2>
+    <p>本扩展不面向 13 岁以下儿童，也不会有意收集任何人的个人信息。由于扩展本身不收集任何数据，这一条在技术上自然成立。</p>
+  </section>
+
+  <section>
+    <h2><span class="num">九、</span>政策变更</h2>
+    <p>如果未来版本的功能变化导致本政策需要调整（例如新增可选的云同步），我们会在本页面更新内容并修改页面顶部的「最后更新」日期。若变更涉及数据的收集或外传，会在扩展更新说明中显著提示，并要求你主动确认后才生效。在变更生效前，你已有的数据仍按本政策处理。</p>
+  </section>
+
+  <section>
+    <h2><span class="num">十、</span>联系方式</h2>
+    <p>对本政策有任何疑问，或希望确认自己本机保存了哪些数据，可以通过 Chrome 应用商店中本扩展详情页的「开发者联系信息」与我联系。由于我们不持有任何用户数据，无法按账号查询或删除记录——所有记录都在你自己的浏览器里，用设置页的「清空全部记录」即可彻底删除。</p>
+  </section>
+
+  <div class="en">
+    <h2>English summary</h2>
+    <p>Tab Vault is a Chrome extension that records snapshots of your open windows and tabs so you can restore them after closing a window by accident or after a browser crash.</p>
+    <p>It does <strong>not</strong> collect, transmit, sell, or share any data. There is no network request in the extension code, no analytics, and no third-party SDK. All snapshots are stored locally in your browser's IndexedDB (database name <code>tabvault</code>) and never leave your device. The extension reads only tab URLs, titles, favicons, order, pinned state, and tab-group membership, plus the tab list of a window at the moment you close it. It does not read page content, form input, cookies, or passwords, and it does not run in incognito windows. You can delete all local data at any time from the options page, and uninstalling the extension removes it as well. For questions, use the developer contact information on the extension's Chrome Web Store listing.</p>
+  </div>
+
+  <footer>
+    <span>标签页保险箱 Tab Vault</span>
+    <span>本页面最后更新于 2026 年 10 月 21 日</span>
+  </footer>
+
+</main>
+</body>
+</html>
